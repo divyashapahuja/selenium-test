@@ -21,3 +21,7 @@ Install necessary packages:
   
   installing chai-as-promised,
       -> npm i chai-as-promised
+
+Can also use mochawesome for generating test reports,
+      ->npm install --save-dev mochawesome
+      ->mocha testfile.js --reporter mochawesome //running file at terminal
