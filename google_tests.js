@@ -12,6 +12,7 @@ chai.use(chaiAsPromised);
 
 var driver=new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
 var search_text=rl.question('Enter text to search: ');
+
 Key=webdriver.Key;
 By=webdriver.By;
 
@@ -20,12 +21,12 @@ test.describe('Google Search',function(){
 
 
 	test.beforeEach(function(){
-		// this.timeout(3000);
-  //       setTimeout(function(done){
+		//this.timeout(3000);
+                //setTimeout(function(done){
 
             driver.get('http://www.google.com');
-       //  	done();
-       // },3000)
+         	//done();
+                // },3000)
        
 	});
 
@@ -37,24 +38,16 @@ test.describe('Google Search',function(){
 		//},60000);
 		
 	});
-    
-    test.beforeEach(function(){
-    	this.timeout(5000);
-        setTimeout(function(done){
-        	
-        	done();
-       },5000)
-    })
 
 	test.it('has title',function(){
 		//var promise;
-        //this.timeout(5000);
-        //promise=new Promise(function(resolve,reject){
+                //this.timeout(5000);
+                //promise=new Promise(function(resolve,reject){
         	//setTimeout(function(done){
         		driver.getTitle().then(function(title){
         			expect(title).equals('Google')
         		});
-        	  //  done()
+        	//  done()
         	//},5000);
 		// });
 		// return promise;	
@@ -69,7 +62,7 @@ test.describe('Google Search',function(){
              	assert.equal(value,search_text);
             });
 	         
-	        // done();
+	// done();
     	//},10000)
     });
 
